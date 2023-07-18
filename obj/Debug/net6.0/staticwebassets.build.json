@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zynD817Lc3MQYuAREFKnD46SrvlNdjMpOGwldu+ykPE=",
+  "Hash": "Ta8i27SRSpJnQqQ7RVxqOd1e8gp/uf71ownhclEu4dI=",
   "Source": "ProyectoCalzadosEstrella",
   "BasePath": "_content/ProyectoCalzadosEstrella",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Armando\\Documents\\InventarioCalzadosEstrella\\ProyectoCalzadosEstrella\\wwwroot\\images\\P_1.JPG",
+      "SourceId": "ProyectoCalzadosEstrella",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Armando\\Documents\\InventarioCalzadosEstrella\\ProyectoCalzadosEstrella\\wwwroot\\",
+      "BasePath": "_content/ProyectoCalzadosEstrella",
+      "RelativePath": "images/P_1.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\P_1.JPG"
     },
     {
       "Identity": "C:\\Users\\Armando\\Documents\\InventarioCalzadosEstrella\\ProyectoCalzadosEstrella\\wwwroot\\js\\site.js",

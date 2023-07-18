@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ProyectoCalzadosEstrella.Models;
 
-namespace ProyectoCalzadosEstrella.Data;
+namespace ProyectoCalzadosEstrella.Data
+{
 
 public class ApplicationDbContext : IdentityDbContext
 {
@@ -10,4 +14,7 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+
+    public DbSet<ProyectoCalzadosEstrella.Models.Insumo> DataInsumos {get; set;}
+}
 }

@@ -1,0 +1,46 @@
+@model IEnumerable<ProyectoCalzadosEstrella.Models.Insumo>
+
+@{
+    ViewData["Title"] = "Catalogo";  
+}
+
+<section id="catalogue" class="catalogue section-bg">
+
+  <div class="container">
+    <div class="section-title">
+          <h2 data-aos="fade-in">Insumos</h2>
+        </div>
+    <h1>@ViewData["Message"]</h1>
+    <div class="row">
+      <div class="col">
+        <div id="products" class="mb-3">
+          <div class="row">
+            @foreach (var item in Model) {
+            <div class="col-lg-4 catalogue-item filter-app">
+            <div style="text-align:center;" >
+                    <img class="card-img-top" height="500"
+                       src="/images/@item.ImagenName" alt="@item.ImagenName"  />
+                  </div>
+              
+                <div class="catalogo" style="height: 250px;background-color: #D6BFAA;">
+				<div style="text-align:center;" class="card-body" >
+                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                  <p class="card-text">Precio: S/.@Html.DisplayFor(modelItem => item.Precio)</p>
+                  <div style="margin-top: 30px;">
+            
+						<div class="col" style="text-align: center;">
+                  <a class="btn btn-primary" asp-action="Add2" asp-route-id="@item.Id">Agregar</a>
+                  <a class="btn btn-info" asp-action="Details2" asp-route-id="@item.Id">Detalle</a>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            }
+
+            </section>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
