@@ -24,5 +24,14 @@ namespace ProyectoCalzadosEstrella.Controllers
             return View(await lista.ToListAsync());
         }
 
+        public async Task<IActionResult> Details(int id)
+        {
+           Insumo objProduct = await _context.DataInsumos.FindAsync(id);
+           if(objProduct == null){
+               return NotFound();
+           }
+           return View(objProduct);
+        }
+
     }
 }
