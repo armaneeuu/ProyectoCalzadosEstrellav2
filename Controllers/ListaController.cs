@@ -20,11 +20,24 @@ namespace ProyectoCalzadosEstrella.Controllers
 
          public async Task<IActionResult> Index()
         {
-            var lista = from o in _context.DataInsumos select o;
-            return View(await lista.ToListAsync());
+            var lista = _context.DataInsumos.Where(x=>x.Categoria == "I");
+            return View(lista);
+        }
+        public async Task<IActionResult> Index2()
+        {
+            var lista = _context.DataInsumos.Where(x=>x.Categoria == "C");
+            return View(lista);
         }
 
         public async Task<IActionResult> Details(int id)
+        {
+           Insumo objProduct = await _context.DataInsumos.FindAsync(id);
+           if(objProduct == null){
+               return NotFound();
+           }
+           return View(objProduct);
+        }
+        public async Task<IActionResult> Details2(int id)
         {
            Insumo objProduct = await _context.DataInsumos.FindAsync(id);
            if(objProduct == null){
