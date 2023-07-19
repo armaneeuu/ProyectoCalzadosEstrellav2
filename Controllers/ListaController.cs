@@ -18,12 +18,12 @@ namespace ProyectoCalzadosEstrella.Controllers
             _context = context;
         }
 
-         public async Task<IActionResult> Index()
+         public IActionResult Index()
         {
             var lista = _context.DataInsumos.Where(x=>x.Categoria == "I");
             return View(lista);
         }
-        public async Task<IActionResult> Index2()
+        public IActionResult Index2()
         {
             var lista = _context.DataInsumos.Where(x=>x.Categoria == "C");
             return View(lista);
