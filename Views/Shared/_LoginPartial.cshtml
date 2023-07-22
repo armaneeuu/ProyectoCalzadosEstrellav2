@@ -1,16 +1,25 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using System.Collections.Generic;
+@using System.Threading.Tasks;
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
+    IdentityUser myidentity = await Task.Run(() => UserManager.GetUserAsync(User));
+    var roles = await Task.Run(() => UserManager.GetRolesAsync(myidentity));
+    @if(roles.Contains("Admin") || roles.Contains("Operador")){
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Insumo" asp-action="Index">Productos</a>
+        </li>
+    }
     <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Lista" asp-action="Index">Insumos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Lista" asp-action="Index2">Calzados</a>
-                        </li>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Lista" asp-action="Index">Insumos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Lista" asp-action="Index2">Calzados</a>
+    </li>
     <li class="nav-item">
         <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
     </li>
