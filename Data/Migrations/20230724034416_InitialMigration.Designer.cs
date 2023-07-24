@@ -12,7 +12,7 @@ using ProyectoCalzadosEstrella.Data;
 namespace ProyectoCalzadosEstrella.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230718032424_InitialMigration")]
+    [Migration("20230724034416_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -258,14 +258,14 @@ namespace ProyectoCalzadosEstrella.Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("nombre");
 
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("numeric")
-                        .HasColumnName("precio");
-
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("status");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("integer")
+                        .HasColumnName("precio");
 
                     b.HasKey("Id");
 

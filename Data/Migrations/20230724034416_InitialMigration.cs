@@ -59,7 +59,7 @@ namespace ProyectoCalzadosEstrella.Data.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     nombre = table.Column<string>(type: "text", nullable: false),
                     descripcion = table.Column<string>(type: "text", nullable: false),
-                    precio = table.Column<decimal>(type: "numeric", nullable: false),
+                    precio = table.Column<int>(type: "integer", nullable: false),
                     image = table.Column<string>(type: "text", nullable: false),
                     duedate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     status = table.Column<string>(type: "text", nullable: false),

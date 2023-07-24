@@ -19,7 +19,7 @@ namespace ProyectoCalzadosEstrella.Models
         public string Descripcion {get; set;}
 
         [Column("precio")]
-        public Decimal Precio {get; set;}
+        public int Stock {get; set;}
 
         [Column("image")]
         public String ImagenName {get; set;}

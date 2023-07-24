@@ -255,14 +255,14 @@ namespace ProyectoCalzadosEstrella.Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("nombre");
 
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("numeric")
-                        .HasColumnName("precio");
-
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("status");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("integer")
+                        .HasColumnName("precio");
 
                     b.HasKey("Id");
 
