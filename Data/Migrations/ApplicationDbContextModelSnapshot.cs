@@ -262,7 +262,7 @@ namespace ProyectoCalzadosEstrella.Data.Migrations
 
                     b.Property<int>("Stock")
                         .HasColumnType("integer")
-                        .HasColumnName("precio");
+                        .HasColumnName("stock");
 
                     b.HasKey("Id");
 

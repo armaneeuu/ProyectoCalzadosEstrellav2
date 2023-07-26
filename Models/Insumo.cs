@@ -18,7 +18,7 @@ namespace ProyectoCalzadosEstrella.Models
         [Column("descripcion")]
         public string Descripcion {get; set;}
 
-        [Column("precio")]
+        [Column("stock")]
         public int Stock {get; set;}
 
         [Column("image")]
@@ -32,6 +32,11 @@ namespace ProyectoCalzadosEstrella.Models
         
         [Column("categoria")]
         public String Categoria { get; set;}
+
+        public Insumo()
+        {
+            DueDate = DateTime.UtcNow;
+        }
 
     }
 }
